@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Simple monthly pricing for PocketPlan, a fictional planning app.">
+  <title>Hello, pricing! | PocketPlan</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f5f7fa; color: #182334; font-family: system-ui, sans-serif; line-height: 1.6; }
+    main { width: min(100% - 40px, 960px); margin: 0 auto; padding: 64px 0; }
+    header { margin-bottom: 36px; }
+    .app-name { color: #2457b5; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: .85rem; }
+    h1 { margin: 12px 0; font-size: clamp(2.2rem, 7vw, 3.6rem); line-height: 1.15; letter-spacing: -.04em; }
+    .intro { max-width: 540px; color: #536174; }
+    .author { font-size: .85rem; font-weight: 650; letter-spacing: .06em; }
+    h2 { font-size: 1.3rem; margin-bottom: 6px; }
+    .billing { margin: 0 0 20px; color: #536174; }
+    .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .plan { background: #fff; border: 1px solid #dce2ea; border-radius: 16px; padding: 26px; }
+    .plan.featured { border: 2px solid #2457b5; padding: 25px; }
+    h3 { margin: 0; font-size: 1.2rem; }
+    .price { margin: 16px 0 22px; color: #536174; }
+    .price strong { color: #182334; font-size: 2.5rem; line-height: 1.2; letter-spacing: -.04em; }
+    ul { margin: 0; padding-left: 20px; }
+    li { padding: 5px 0; }
+    li::marker { color: #2457b5; }
+    footer { margin-top: 28px; color: #536174; font-size: .85rem; }
+    @media (max-width: 680px) {
+      main { padding: 36px 0; }
+      .plans { grid-template-columns: 1fr; }
+      .plan { padding: 24px; }
+      .plan.featured { padding: 23px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="app-name">PocketPlan</p>
+      <h1>Hello, pricing!</h1>
+      <p class="intro">A little more clarity for your everyday plans. Choose the space you need to organize tasks and keep moving.</p>
+      <p class="author">IVAN VRDOLJAK</p>
+    </header>
+    <section aria-labelledby="pricing-heading">
+      <h2 id="pricing-heading">Simple plans, clear prices</h2>
+      <p class="billing">Monthly pricing in euros.</p>
+      <div class="plans">
+        <article class="plan" aria-labelledby="free-heading">
+          <h3 id="free-heading">Free</h3>
+          <p class="price"><strong>€0</strong> / month</p>
+          <ul>
+            <li>Up to 3 projects</li>
+            <li>Basic task lists</li>
+            <li>Weekly reminders</li>
+          </ul>
+        </article>
+        <article class="plan featured" aria-labelledby="basic-heading">
+          <h3 id="basic-heading">Basic</h3>
+          <p class="price"><strong>€9</strong> / month</p>
+          <ul>
+            <li>Up to 20 projects</li>
+            <li>Custom task labels</li>
+            <li>Daily reminders</li>
+          </ul>
+        </article>
+        <article class="plan" aria-labelledby="pro-heading">
+          <h3 id="pro-heading">Pro</h3>
+          <p class="price"><strong>€19</strong> / month</p>
+          <ul>
+            <li>Unlimited projects</li>
+            <li>Team collaboration</li>
+            <li>Priority support</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <footer>PocketPlan is a fictional app. Prices are for demonstration only.</footer>
+  </main>
+</body>
+</html>
